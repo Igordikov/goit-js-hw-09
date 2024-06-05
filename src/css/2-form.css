@@ -91,6 +91,8 @@
   filter: blur(4.5rem);
 } */
 
+
+
 .feedback-form {
   max-width: 200px;
   margin: 0 auto;
@@ -99,4 +101,10 @@
 
 .textarea {
 margin-bottom: 20px;
+}
+
+.nav-section {
+  padding: 50px 100px 50px 100px;
+  display: flex;
+  justify-content: space-between;
 }
