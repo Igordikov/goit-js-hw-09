@@ -97,10 +97,11 @@ import  "simplelightbox/dist/simple-lightbox.min.css" ;
            image.width = 300; 
            image.height = 200;
 
-   
            link.appendChild(image);
            galleryItem.appendChild(link);
    
+          
+           
            return galleryItem;
        };
    
@@ -112,7 +113,12 @@ import  "simplelightbox/dist/simple-lightbox.min.css" ;
    
            if (event.target.nodeName !== 'IMG') return;
    
-           const lightbox = new SimpleLightbox('.gallery a');
+           const lightbox = new SimpleLightbox('.gallery a', {
+            captionsData: 'alt',
+            caption: function(element) {
+                return element.querySelector('img').alt;
+            }
+           });
     lightbox.show();
        });
    
