@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to form</h1>
+    </section>
+
+  <section>
+      <form class="feedback-form" autocomplete="off">
+        <label>
+          Email
+          <input class="input is-info has-text-link has-background-light" type="email"
+          name="email"
+          autofocus>
+        </label>
+
+        <label>
+          Message
+          <textarea class="textarea is-info has-background-light" name="message" rows="8"></textarea>
+        </label>
+
+       <button class="button is-link is-rounded" type="submit">Submit</button>
+      </form>
     </section>
   </body>
 </html>
