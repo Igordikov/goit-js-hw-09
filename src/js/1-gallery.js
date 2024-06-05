@@ -108,19 +108,16 @@ import  "simplelightbox/dist/simple-lightbox.min.css" ;
        const galleryItems = images.map(image => createGalleryItem(image));
        gallery.append(...galleryItems);
    
-       gallery.addEventListener('click', event => {
-           event.preventDefault();
-   
-           if (event.target.nodeName !== 'IMG') return;
+    
    
            const lightbox = new SimpleLightbox('.gallery a', {
             captionsData: 'alt',
             caption: function(element) {
                 return element.querySelector('img').alt;
             }
-           });
-    lightbox.show();
-       });
+        });
+        
+       
    
        
       
