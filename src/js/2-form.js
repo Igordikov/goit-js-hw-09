@@ -13,7 +13,7 @@ let formData = {
 const form = document.querySelector('.feedback-form');
 
 form.addEventListener('input', (event) => {
-    formData[event.target.name] = event.target.value;
+    formData[event.target.name] = event.target.value.trim();
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 });
 
@@ -33,6 +33,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     for (let field in formData) {
         if (!formData[field].trim()) {
+            
             alert('Будь ласка, заповніть усі поля');
             return;
         }
